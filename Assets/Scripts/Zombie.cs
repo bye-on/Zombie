@@ -41,16 +41,16 @@ public class Zombie : LivingEntity
 
         zombieRenderer = GetComponentInChildren<Renderer>();
     }
-    // public void SetUp(ZombieData zombieData)
-    // {
-    //     startingHealth = zombieData.health;
-    //     health = zombieData.health;
+    public void SetUp(ZombieData zombieData)
+    {
+        startingHealth = zombieData.health;
+        health = zombieData.health;
 
-    //     damage = zombieData.damage;
+        damage = zombieData.damage;
 
-    //     navMeshAgent.speed = zombieData.speed;
-    //     zombieRenderer.material.color = zombieData.skinColor;
-    // }
+        navMeshAgent.speed = zombieData.speed;
+        zombieRenderer.material.color = zombieData.skinColor;
+    }
     void Start()
     {
         StartCoroutine(UpdatePath());
